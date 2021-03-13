@@ -1,0 +1,1 @@
+# wysiwyg-ckeditor-tinymce-sample

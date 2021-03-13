@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Text Editor CMS</title>
+</head>
+<body>
+
+    <form method="post">
+        <h2>TinyMCE Version 5.7.0</h2>
+        <!-- TinyMCE -->
+        <textarea id="tinymcetes">Test TinyMCE editor</textarea>
+        <h2>CKEditor Version 4.16.0</h2>
+        <!-- CKEditor -->
+        <textarea name="ckeditor">CKEditor nih, copy codenya di sini .</textarea>
+        
+    </form>
+
+<script src="/bower_components/tinymce/tinymce.min.js"></script>
+<script src="/bower_components/ckeditor/ckeditor.js"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea#tinymcetes',
+        base_url: '/bower_components/tinymce',
+        // menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste imagetools wordcount'
+        ],
+        toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+    });
+    CKEDITOR.replace('ckeditor');
+</script>    
+</body>
+</html>
